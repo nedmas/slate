@@ -1,0 +1,5 @@
+{
+    "name": "nedmas/slate",
+    "description": "Slate is theme for GitHub Pages or your Sculpin site. Ported from https://github.com/jasoncostello/slate",
+    "type": "sculpin-theme"
+}
