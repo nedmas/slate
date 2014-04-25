@@ -16,15 +16,17 @@
 <!-- HEADER -->
 <div id="header_wrap" class="outer">
     <header class="inner">
-        <a id="forkme_banner" href="https://github.com/{{ page.project.owner }}/{{ page.project.repo }}">View on GitHub</a>
+        {% if page.project.repo is defined %}<a id="forkme_banner" href="https://github.com/{{ page.project.owner }}/{{ page.project.repo }}">View on GitHub</a>{% endif %}
 
         <h1 id="project_title">{% if page.title is defined %}{{ page.title }}{% else %}{{ page.project.name }}{% endif %}</h1>
         <h2 id="project_tagline">{% if page.description is defined %}{{ page.description }}{% else %}{{ page.project.description }}{% endif %}</h2>
 
+        {% if page.project.repo is defined %}
         <section id="downloads">
             <a class="zip_download_link" href="https://github.com/{{ page.project.owner }}/{{ page.project.repo }}/zipball/master">Download this project as a .zip file</a>
             <a class="tar_download_link" href="https://github.com/{{ page.project.owner }}/{{ page.project.repo }}/tarball/master">Download this project as a tar.gz file</a>
         </section>
+        {% endif %}
     </header>
 </div>
 
